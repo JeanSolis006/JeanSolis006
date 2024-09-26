@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechClean Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #1e2a38, #4a6572);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        header img {
+            height: 60px; /* Ajusta el tamaño del logo */
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/header-bg.jpg') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background-color: #282c34;
+            color: white;
+            padding: 0.5rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #61dafb;
+        }
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .producto {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #61dafb;
+        }
+        .producto h3 {
+            margin: 1rem 0 0.5rem;
+            color: #333;
+        }
+        .producto p {
+            margin: 0;
+            color: #666;
+        }
+        .precio {
+            font-size: 1.5rem;
+            color: #61dafb;
+            margin: 0.5rem 0;
+        }
+        #contacto-section, #pago-section {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+        #contacto-section h2, #pago-section h2 {
+            margin-top: 0;
+            color: #282c34;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background: #61dafb;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #4fa3b4;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-size: 1.1rem;
+        }
+        .social-links a:hover {
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <img src="images/Techclean-store-logo.jpeg" alt="">
+        <h1>TechClean Store</h1>
+        <p>Innovación en productos de limpieza y tecnología</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#productos-limpieza">Limpieza</a>
+        <a href="#productos-tecnologia">Tecnología</a>
+        <a href="#productos-segunda">Segunda Mano</a>
+        <a href="#contacto-section">Contacto</a>
+    </nav>
+
+    <!-- Sección de productos de limpieza -->
+    <section id="productos-limpieza">
+        <h2>Productos de Limpieza</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="images/Ambiental-win-plus.png" alt="Ambiental win plus">
+                <h3>Ambiental win plus 360ml </h3>
+                <p>Para mantener tu casa con un aroma delicioso.</p>
+                <span class="precio">$2.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Ambiental-la-original.png" alt="Ambiental la original">
+                <h3>Ambiental la original 360ml </h3>
+                <p>Deja tu hogar con un aroma agradable.</p>
+                <span class="precio">$1.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Ambiental-glade.jpg" alt="Ambiental glade">
+                <h3>Ambiental glade 400ml </h3>
+                <p>Deja tu hogar con un aroma agradable y limpio.</p>
+                <span class="precio">$3.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Glade-fresh-shine.jpg" alt="Glade fresh shine">
+                <h3>Ambientales glade fresh shine 270ml (2 unidades) </h3>
+                <p>Deja tu hogar con un aroma agradable y limpio.</p>
+                <span class="precio">$18.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/glade-abrazos-de-vainilla.jpg" alt="glade abrazos de vainilla">
+                <h3>Ambientales glade abrazos de vainilla 270ml (2 unidades) </h3>
+                <p>Deja tu hogar con un aroma agradable y limpio.</p>
+                <span class="precio">$26.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/air-wick.jpg" alt="air wick">
+                <h3>Ambientales air wick 250ml (2 unidades) </h3>
+                <p>Deja tu hogar con un aroma agradable y limpio.</p>
+                <span class="precio">$16.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/glade-270-ml.jpg" alt="glade 270ml">
+                <h3>Ambientales glade de 270ml (por separado) </h3>
+                <p>Deja tu hogar con un aroma agradable y limpio.</p>
+                <span class="precio">$10.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Aceite-manzanilla.jpg" alt="Aceite manzanilla">
+                <h3>Aceite de manzanilla 200ml para mi bebe </h3>
+                <p>Perfecto para tu bebe.</p>
+                <span class="precio">$2.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Aceite-natural.jpg" alt="Aceite natural">
+                <h3>Aceite de natural 200ml para mi bebe </h3>
+                <p>Perfecto para tu bebe.</p>
+                <span class="precio">$2.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Aceite-johnsons.png" alt="Aceite johnsons">
+                <h3>Aceite Johnsons  300ml </h3>
+                <p>Perfecto para tu bebe.</p>
+                <span class="precio">$5.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Foco-60w.jpg" alt="Focos 60w">
+                <h3>Focos sylvania de 60w </h3>
+                <p>Focos ahorradores en pack de 4.</p>
+                <span class="precio">$2.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Foco-60w.jpg" alt="Focos 60w">
+                <h3>Focos sylvania de 60w </h3>
+                <p>Focos ahorradores en pack de 6x8.</p>
+                <span class="precio">$4.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Focos-luz-blanca.jpg" alt="Focos luz blanca 60w">
+                <h3>Focos sylvania de 60w luz blanca de dia </h3>
+                <p>Focos ahorradores en pack de 3x4.</p>
+                <span class="precio">$2.20</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Pastillas-tips-ambiental.jpg" alt="Pastillas tips ">
+                <h3>Pastillas tips de diferentes aromas </h3>
+                <p>Para dejar con una buena fragancia en sus baños.</p>
+                <span class="precio">$1.20</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Ambientol-pastillas.jpg" alt="Pastillas ambientol ">
+                <h3>Pastillas ambientol de diferentes aromas </h3>
+                <p>Para dejar con una buena fragancia en sus baños.</p>
+                <span class="precio">$1.20</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Win-plus-pastillas.jpg" alt="Pastillas win plus ">
+                <h3>Pastillas win plus de diferentes aromas </h3>
+                <p>Para dejar con una buena fragancia en sus baños.</p>
+                <span class="precio">$1.20</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Polvo-de-cocina-krik.jpg" alt="Polvo de cocina krik ">
+                <h3>Polvo limpiador de cocina Krik </h3>
+                <p>Exelente para evitar daños en tus ollas y desengrasar.</p>
+                <span class="precio">$1.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Toallas-de-manos-en-z.jpg" alt="Toallas de manos en z ">
+                <h3>Toallas de manos en z Bio solution 150 unidades </h3>
+                <p>Manos ecologicas en forma de z super absorventes.</p>
+                <span class="precio">2.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Masking-evans-36.7m.jpg" alt="Masking de 36.7m evans ">
+                <h3>Masking de 36.7m evans </h3>
+                <p>Masking color beige de 36,7m evans .</p>
+                <span class="precio">1.80</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Energizer-9v1.jpeg" alt="Bateria energizer 9v1 ">
+                <h3>Baterias energizer 9v1 </h3>
+                <p>Bateria energizer 9v1 .</p>
+                <span class="precio">4.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Fundas-basura-negra-30x36.jpg" alt="Fundas negras de basura 30x36 ">
+                <h3>Fundas negras industriales de basura ecologicas de 30x36</h3>
+                <p>Fundas ecologicas industriales de basura de 30x36.</p>
+                <span class="precio">1.25</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Fundas-basura-blanca.jpeg" alt="Fundas blancas de basura 18x24 ">
+                <h3>Fundas blancas de basura  de 18x24</h3>
+                <p>Fundas de basura de 18x24.</p>
+                <span class="precio">0.50</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Guantes-negros.jpeg" alt="Guantes talla 8, 8 1/2 ">
+                <h3>Guantes de latex de color negro en talla 8 y 8 1/2 </h3>
+                <p>guantes de latex en talla 8 y 8 1/2 .</p>
+                <span class="precio">1.20</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Mehas-para-trapeador.jpg" alt="Mechas ">
+                <h3>Mechas para trapeador  </h3>
+                <p>Mechas de algodon para trapeador .</p>
+                <span class="precio">3.00</span>
+            </div>
+         </div>
+    </section>
+
+    <!-- Sección de productos de tecnología -->
+    <section id="productos-tecnologia">
+        <h2>Productos de Tecnología</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="images/Audifonos-G11.jpg" alt="Audifonos G11">
+                <h3>Audifonos inalambricos G11 </h3>
+                <p>Audifonos con gran audio y diseño llamativo.</p>
+                <span class="precio">$6.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Smartwatch-t55-pro-max.jpg" alt="Smartwatch t55 pro max">
+                <h3>Smartwatch t55 pro max </h3>
+                <p>Con 2 pares de correas pera combinar y audifonos inalambricos.</p>
+                <span class="precio">$6.00</span>
+            </div>
+        
+            <div class="producto">
+                <img src="images/Smartwatch-dm68max.jpg" alt="Smartwatch dm68max">
+                <h3>Smartwatch dm68max</h3>
+                <p>Acompañado de 2 pares de correas y audifonos inalambricos ideales para ti.</p>
+                <span class="precio">$15.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/Cargador-3-en-1.jpg" alt="Cargador 3 en 1">
+                <h3>Cargador inalambrico 3 en 1</h3>
+                <p>Pon a cargar tu telefono,audifonos y smartwatch con este cargador que te permite cargar 3 dispositivos al mismo tiempo.</p>
+                <span class="precio">$12.00</span>
+            </div>
+         </div>
+    </section>
+
+    <!-- Sección de productos de segunda mano -->
+    <section id="productos-segunda">
+        <h2>Productos de Segunda Mano</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="images/segunda1.jpg" alt="Aspiradora Usada">
+                <h3>Aspiradora Usada</h3>
+                <p>Descripción de la aspiradora usada.</p>
+                <span class="precio">$25.00</span>
+            </div>
+
+            <div class="producto">
+                <img src="images/segunda2.jpg" alt="Monitor de Segunda Mano">
+                <h3>Monitor de Segunda Mano</h3>
+                <p>Descripción del monitor de segunda mano.</p>
+                <span class="precio">$40.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto-section">
+        <h2>Contacto</h2>
+        <p>Para consultas o más información, por favor contáctanos a:</p>
+        <p>Email: <a href="mailto:info@techcleanstore.com">info@techcleanstore.com</a></p>
+        <p>Teléfono: <a href="tel:+593 0999262582">+593 0999262582</a></p>
+        <div class="social-links">
+            <h3>Síguenos en:</h3>
+            <a href="https://facebook.com/techcleanstore" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/techcleanstore" target="_blank">Twitter</a> |
+            <a href="https://instagram.com/techcleanstore" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+</body>
+</html>
